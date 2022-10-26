@@ -20,7 +20,7 @@ function MovieList({ currentRating }) {
         include_video: false,
         page: page,
         "vote_count.gte": 1000,
-        "vote_average.gte": (currentRating - 1) * 2,
+        "vote_average.gte": (rating - 1) * 2,
         with_watch_monetization_types: `flatrate`,
       },
     }).then((result) => {
